@@ -1,156 +1,493 @@
+/* ==========================================================================
+   SHUBHAM DHAGE - CYBERSECURITY & MCA PORTFOLIO STYLES
+   Futuristic Cyberpunk / Dark SOC Terminal Theme
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --bg-primary: #05070f;
+  --bg-secondary: #0b1120;
+  --bg-card: rgba(15, 23, 42, 0.75);
+  --border-cyber: rgba(147, 51, 234, 0.35);
+  --border-cyan: rgba(6, 182, 212, 0.35);
+  --neon-purple: #9333ea;
+  --neon-purple-glow: #c084fc;
+  --neon-cyan: #06b6d4;
+  --neon-green: #10b981;
+  --neon-red: #ef4444;
+  --text-main: #f3f4f6;
+  --text-muted: #94a3b8;
+}
+
 html {
   scroll-behavior: smooth;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  overflow-x: hidden;
+  position: relative;
+  min-height: 100vh;
 }
 
+/* Cyber Font Classes */
+.font-cyber {
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 0.05em;
+}
+
+.font-code {
+  font-family: 'Fira Code', monospace;
+}
+
+/* Background 3D Canvas */
+#cyber-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.65;
+}
+
+/* Subtle Cyber Scanline Overlay */
+.cyber-grid-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: 
+    linear-gradient(to right, rgba(147, 51, 234, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(6, 182, 212, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Content wrapper above 3D canvas */
+.content-wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* Anchor Scroll Spacing */
 #home,
+#terminal,
 #about,
+#skills,
 #projects,
+#security-labs,
 #contact {
   scroll-margin-top: 90px;
 }
 
+/* Navbar */
 .navbar-bg {
-  background: rgba(0, 0, 0, 0.75);
+  background: rgba(5, 7, 15, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(147, 51, 234, 0.25);
 }
 
+/* Gradient Texts */
 .gradient-text {
-  background: linear-gradient(to right, #9333ea, #c084fc);
+  background: linear-gradient(135deg, #a855f7 0%, #38bdf8 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
+.gradient-text-purple {
+  background: linear-gradient(135deg, #c084fc 0%, #a855f7 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-cyan {
+  background: linear-gradient(135deg, #38bdf8 0%, #06b6d4 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Section Containers */
 .section-padding {
-  padding: 100px 24px;
+  padding: 90px 24px;
   max-width: 1200px;
   margin: auto;
 }
 
 .section-title {
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #a855f7;
-  margin-bottom: 30px;
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 15px;
+  font-family: 'Orbitron', sans-serif;
+  letter-spacing: 1px;
 }
 
-.section-text {
-  color: #d1d5db;
+.section-subtitle {
   text-align: center;
-  max-width: 850px;
-  margin: auto;
-  line-height: 2;
+  color: var(--text-muted);
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
 }
 
+/* Buttons */
 .primary-btn {
-  background: #9333ea;
-  padding: 12px 24px;
-  border-radius: 12px;
-  transition: 0.3s;
+  background: linear-gradient(135deg, #9333ea 0%, #7e22ce 100%);
+  color: #ffffff;
+  padding: 12px 26px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(192, 132, 252, 0.4);
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.4);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .primary-btn:hover {
-  background: #7e22ce;
+  background: linear-gradient(135deg, #a855f7 0%, #9333ea 100%);
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.7);
+  transform: translateY(-2px);
+  color: #ffffff;
 }
 
 .secondary-btn {
-  border: 1px solid #4b5563;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  color: #38bdf8;
   padding: 12px 24px;
-  border-radius: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .secondary-btn:hover {
-  background: #111827;
+  background: rgba(6, 182, 212, 0.15);
+  border-color: #38bdf8;
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.4);
+  transform: translateY(-2px);
+  color: #ffffff;
 }
 
-.profile-container{
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
-    overflow: hidden;
-    border: 5px solid #9333ea;
-    box-shadow: 0 0 60px rgba(147,51,234,.6);
-    display:flex;
-    justify-content:center;
-    align-items:center;
-     box-shadow:
-        0 0 40px #9333ea,
-        0 0 80px #9333ea,
-        0 0 140px #9333ea;
+.cyber-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-family: 'Fira Code', monospace;
+  font-weight: 600;
+  background: rgba(147, 51, 234, 0.15);
+  border: 1px solid rgba(147, 51, 234, 0.4);
+  color: #c084fc;
 }
 
-.profile-image{
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-} 
+.cyber-badge-cyan {
+  background: rgba(6, 182, 212, 0.15);
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  color: #38bdf8;
+}
 
-.profile-glow {
+.cyber-badge-green {
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #34d399;
+}
+
+/* Profile Picture Holographic Cyber Rings */
+.profile-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 320px;
+}
+
+.profile-ring {
   position: absolute;
-  width: 300px;
-  height: 300px;
-  background: #9333ea;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
-  filter: blur(120px);
-  opacity: 0.25;
+  border: 2px dashed rgba(168, 85, 247, 0.6);
+  animation: spinClockwise 20s linear infinite;
+  box-shadow: 0 0 30px rgba(147, 51, 234, 0.3);
 }
 
-.skill-card,
-.project-card {
-  background: #111827;
+.profile-ring-outer {
+  position: absolute;
+  width: 112%;
+  height: 112%;
+  border-radius: 50%;
+  border: 1px solid rgba(6, 182, 212, 0.4);
+  border-top-color: #38bdf8;
+  border-bottom-color: transparent;
+  animation: spinCounter 15s linear infinite;
+}
+
+.profile-container {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #9333ea;
+  box-shadow: 0 0 40px rgba(147, 51, 234, 0.6), inset 0 0 20px rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #0b1120;
+  z-index: 2;
+  position: relative;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.profile-container:hover .profile-image {
+  transform: scale(1.06);
+}
+
+@keyframes spinClockwise {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spinCounter {
+  from { transform: rotate(360deg); }
+  to { transform: rotate(0deg); }
+}
+
+/* Cyber Cards */
+.cyber-card {
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(147, 51, 234, 0.25);
+  border-radius: 12px;
   padding: 24px;
-  border-radius: 16px;
-  transition: 0.3s;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
 }
 
-.skill-card:hover,
-.project-card:hover {
-  transform: translateY(-6px);
+.cyber-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to bottom, #9333ea, #06b6d4);
+  opacity: 0.4;
+  transition: opacity 0.3s ease, width 0.3s ease;
+}
+
+.cyber-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(168, 85, 247, 0.6);
+  box-shadow: 0 10px 30px -10px rgba(147, 51, 234, 0.4);
+}
+
+.cyber-card:hover::before {
+  opacity: 1;
+  width: 6px;
+}
+
+/* Education Cards Special */
+.edu-card {
+  border: 1px solid rgba(6, 182, 212, 0.3);
+  background: linear-gradient(145deg, rgba(15, 23, 42, 0.8) 0%, rgba(11, 17, 32, 0.9) 100%);
+  position: relative;
+  border-radius: 16px;
+  padding: 28px;
+}
+
+.edu-card:hover {
+  border-color: #38bdf8;
+  box-shadow: 0 10px 35px -10px rgba(6, 182, 212, 0.35);
+}
+
+/* Terminal Styles */
+.terminal-window {
+  background: rgba(5, 8, 16, 0.95);
+  border: 1px solid rgba(6, 182, 212, 0.35);
+  border-radius: 12px;
+  box-shadow: 0 0 40px rgba(6, 182, 212, 0.15), inset 0 0 20px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  font-family: 'Fira Code', monospace;
+}
+
+.terminal-header {
+  background: rgba(15, 23, 42, 0.9);
+  padding: 10px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.terminal-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.dot-red { background-color: #ef4444; }
+.dot-yellow { background-color: #f59e0b; }
+.dot-green { background-color: #10b981; }
+
+.terminal-body {
+  padding: 20px;
+  min-height: 280px;
+  max-height: 420px;
+  overflow-y: auto;
+  font-size: 0.875rem;
+  color: #38bdf8;
+  line-height: 1.6;
+}
+
+.terminal-body::-webkit-scrollbar {
+  width: 6px;
+}
+
+.terminal-body::-webkit-scrollbar-thumb {
+  background: rgba(147, 51, 234, 0.4);
+  border-radius: 4px;
+}
+
+.terminal-input-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.terminal-input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #a855f7;
+  font-family: 'Fira Code', monospace;
+  font-size: 0.9rem;
+  width: 100%;
+}
+
+/* Nav Link Hover Effects */
+.nav-link {
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: linear-gradient(90deg, #9333ea, #06b6d4);
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-  color: #a855f7;
+  color: #38bdf8;
 }
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* Cybersecurity Attack Alert Banner */
+.cyber-alert {
+  display: none;
+  animation: flashAlert 0.4s ease-in-out infinite alternate;
+}
+
+@keyframes flashAlert {
+  from { opacity: 0.8; }
+  to { opacity: 1; filter: drop-shadow(0 0 10px #ef4444); }
+}
+
+/* Glitch Text Effect */
+.glitch-hover:hover {
+  text-shadow: 2px 2px #ef4444, -2px -2px #06b6d4;
+}
+
+/* Defense Status Gauge */
+.defense-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #10b981;
+  box-shadow: 0 0 10px #10b981;
+  animation: pulseGreen 2s infinite;
+}
+
+@keyframes pulseGreen {
+  0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { transform: scale(1); box-shadow: 0 0 0 8px rgba(16, 185, 129, 0); }
+  100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+
+/* Responsive Fixes */
 @media (max-width: 768px) {
+  .section-padding {
+    padding: 70px 16px;
+  }
+
+  .profile-wrapper {
+    width: 260px;
+    height: 260px;
+  }
 
   .profile-container {
-      width: 280px;
-      height: 280px;
-      margin-top: 10px;
+    width: 210px;
+    height: 210px;
   }
-
-  .profile-image {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-  }
-@media (max-width: 768px) {
 
   .primary-btn,
   .secondary-btn {
-      padding: 10px 20px;
-      font-size: 16px;
+    padding: 10px 18px;
+    font-size: 0.875rem;
   }
 
-}
-@media (max-width: 768px) {
+  .section-title {
+    font-size: 1.85rem;
+  }
 
   #home h1 {
-      font-size: 3rem;
-      line-height: 1.05;
+    font-size: 2.35rem;
+    line-height: 1.15;
   }
-
-}
-
-@media (max-width: 768px) {
-
-  #home {
-      gap: 1.5rem;
-      padding-top: 80px;
-  }
-
-}
 }

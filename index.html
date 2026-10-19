@@ -5,224 +5,885 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Shubham Dhage | Cyber Security Portfolio</title>
+    <title>Shubham Dhage | MCA & Cyber Security Portfolio | Security Analyst</title>
 
     <meta name="description"
-        content="Cyber Security Portfolio of Shubham Dhage - BCA Student, Cyber Security Enthusiast, Networking Learner and Aspiring Security Analyst." />
+        content="Cyber Security & MCA Portfolio of Shubham Dhage - Master of Computer Applications (MCA) scholar at IIMS Pune (SPPU), Cyber Security Enthusiast, Ethical Hacking & SOC Defense Practitioner." />
 
     <meta name="keywords"
-        content="Cyber Security, Ethical Hacking, Networking, Linux, Nmap, Python, Portfolio, Shubham Dhage" />
+        content="Cyber Security, Ethical Hacking, IIMS Pune, SPPU, MCA Student, Network Defense, Kali Linux, Nmap, Python, Portfolio, Shubham Dhage, Security Analyst, Honeypot" />
+    <meta name="author" content="Shubham Dhage" />
 
-    <link rel="icon" href="assets/images/favicon.ico">
+    <!-- Security Meta Directives -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
+    <!-- SVG Cyber Favicon -->
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;500;600;700&family=Orbitron:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap"
         rel="stylesheet">
 
+    <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
 
+    <!-- Custom Futuristic Cyber CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="bg-black text-white">
+<body class="bg-[#05070f] text-gray-100 selection:bg-purple-600 selection:text-white">
 
-    <!-- Navbar -->
-    <header class="fixed top-0 w-full z-50 backdrop-blur-lg navbar-bg">
-        <nav class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+    <!-- 3D Background Canvas -->
+    <canvas id="cyber-canvas"></canvas>
+    <div class="cyber-grid-overlay"></div>
 
-            <h1 class="text-2xl font-bold gradient-text">
-                Shubham Dhage
-            </h1>
+    <div class="content-wrapper">
 
-            <ul class="hidden md:flex gap-8">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-
-            <button id="menu-btn" class="md:hidden text-2xl">
-                ☰
-            </button>
-        </nav>
-
-        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
-            <a href="#home" class="block py-2">Home</a>
-            <a href="#about" class="block py-2">About</a>
-            <a href="#projects" class="block py-2">Projects</a>
-            <a href="#contact" class="block py-2">Contact</a>
+        <!-- Top Cyber Defense Status Ticker -->
+        <div class="bg-black/90 border-b border-purple-900/40 text-xs font-code py-1.5 px-4 text-gray-400 flex justify-between items-center overflow-x-auto whitespace-nowrap z-50 relative">
+            <div class="flex items-center gap-3">
+                <span class="defense-indicator"></span>
+                <span class="text-emerald-400 font-semibold">[DEFENSE POSTURE: SECURE]</span>
+                <span class="hidden md:inline text-gray-500">|</span>
+                <span class="hidden md:inline text-gray-300">HONEYPOT: <span class="text-cyan-400">ACTIVE</span></span>
+                <span class="hidden md:inline text-gray-500">|</span>
+                <span class="hidden md:inline text-gray-300">XSS SANITIZER: <span class="text-cyan-400">ENFORCED</span></span>
+            </div>
+            <div class="flex items-center gap-4 text-xs font-code">
+                <span class="text-purple-400 font-semibold">NODE: MCA @ IIMS PUNE (SPPU)</span>
+                <span class="text-gray-500">|</span>
+                <span class="text-cyan-400">THREATS: 0 DETECTED</span>
+            </div>
         </div>
-    </header>
 
-    <!-- Hero -->
-    <section id="home" class="min-h-screen flex flex-col md:flex-row items-center justify-center px-6 md:px-20 gap-12">
+        <!-- Navbar -->
+        <header class="sticky top-0 w-full z-50 navbar-bg">
+            <nav class="max-w-7xl mx-auto flex justify-between items-center px-4 md:px-8 py-3.5">
 
-        <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right">
+                <!-- Logo / Callout -->
+                <a href="#home" class="flex items-center gap-2 group">
+                    <div class="w-9 h-9 rounded-lg bg-purple-900/50 border border-purple-500/50 flex items-center justify-center text-cyan-400 font-cyber font-bold group-hover:border-cyan-400 transition-colors">
+                        <i class="fas fa-shield-halved text-base text-cyan-400 group-hover:scale-110 transition-transform"></i>
+                    </div>
+                    <div>
+                        <span class="text-lg md:text-xl font-cyber font-bold tracking-wider text-white group-hover:text-cyan-400 transition-colors">
+                            SHUBHAM<span class="text-purple-500">.</span>SEC
+                        </span>
+                        <span class="block text-[10px] font-code text-cyan-400 -mt-1 tracking-widest">
+                            CYBER OPS // MCA
+                        </span>
+                    </div>
+                </a>
 
-            <h1 class="text-4xl md:text-6xl font-bold">
-                Hi, I'm
-                <span class="gradient-text">
-                    Shubham Dhage
+                <!-- Desktop Nav Links -->
+                <ul class="hidden lg:flex items-center gap-7 text-sm font-medium">
+                    <li><a href="#home" class="nav-link text-gray-300 hover:text-white">Home</a></li>
+                    <li><a href="#terminal" class="nav-link text-gray-300 hover:text-white">Live Terminal</a></li>
+                    <li><a href="#about" class="nav-link text-gray-300 hover:text-white">Education & Bio</a></li>
+                    <li><a href="#skills" class="nav-link text-gray-300 hover:text-white">Cyber Arsenal</a></li>
+                    <li><a href="#projects" class="nav-link text-gray-300 hover:text-white">Projects</a></li>
+                    <li><a href="#security-labs" class="nav-link text-gray-300 hover:text-white">Labs & Target</a></li>
+                    <li><a href="#contact" class="nav-link text-gray-300 hover:text-white">Contact</a></li>
+                </ul>
+
+                <!-- Action Controls: Audio Toggle, GitHub, Terminal -->
+                <div class="hidden sm:flex items-center gap-3">
+                    <button id="audio-toggle" type="button" class="border border-purple-500/40 bg-purple-950/40 hover:bg-purple-900/60 px-3 py-1.5 rounded-md text-xs font-code flex items-center gap-1.5 transition-all" title="Toggle Sci-Fi Synthesizer Sound Effects">
+                        🔇 <span class="hidden md:inline text-xs text-gray-400">AUDIO: OFF</span>
+                    </button>
+
+                    <a href="https://github.com/ShubhamDhage874" target="_blank" rel="noopener noreferrer" class="p-2 text-gray-300 hover:text-white hover:text-cyan-400 transition-colors" title="GitHub Profile">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+
+                    <a href="#terminal" class="primary-btn text-xs !py-2 !px-3.5 font-code">
+                        <i class="fas fa-terminal"></i> Terminal
+                    </a>
+                </div>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="menu-btn" class="lg:hidden text-2xl text-gray-300 hover:text-purple-400 focus:outline-none p-1" aria-label="Toggle Navigation Menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </nav>
+
+            <!-- Mobile Dropdown Menu -->
+            <div id="mobile-menu" class="hidden lg:hidden px-6 pt-2 pb-6 border-b border-purple-900/50 bg-[#070b18]/95 backdrop-blur-xl">
+                <a href="#home" class="block py-2.5 text-gray-300 hover:text-cyan-400 border-b border-gray-800 font-medium">Home</a>
+                <a href="#terminal" class="block py-2.5 text-gray-300 hover:text-cyan-400 border-b border-gray-800 font-medium">Live Terminal</a>
+                <a href="#about" class="block py-2.5 text-gray-300 hover:text-cyan-400 border-b border-gray-800 font-medium">Education & Bio</a>
+                <a href="#skills" class="block py-2.5 text-gray-300 hover:text-cyan-400 border-b border-gray-800 font-medium">Cyber Arsenal</a>
+                <a href="#projects" class="block py-2.5 text-gray-300 hover:text-cyan-400 border-b border-gray-800 font-medium">Projects</a>
+                <a href="#security-labs" class="block py-2.5 text-gray-300 hover:text-cyan-400 border-b border-gray-800 font-medium">Labs & Target</a>
+                <a href="#contact" class="block py-2.5 text-gray-300 hover:text-cyan-400 font-medium">Contact</a>
+
+                <div class="flex items-center gap-3 mt-4 pt-3 border-t border-gray-800">
+                    <a href="https://github.com/ShubhamDhage874" target="_blank" class="secondary-btn text-xs !py-1.5 flex-1 justify-center">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+                    <a href="assets/Resume/ShubhamDhage_C.pdf" download class="primary-btn text-xs !py-1.5 flex-1 justify-center">
+                        <i class="fas fa-file-arrow-down"></i> Resume
+                    </a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[90vh] flex flex-col lg:flex-row items-center justify-center px-6 md:px-16 lg:px-24 py-16 gap-12 max-w-7xl mx-auto">
+
+            <!-- Hero Left Bio -->
+            <div class="lg:w-7/12 text-center lg:text-left" data-aos="fade-right">
+
+                <div class="inline-flex items-center gap-2 mb-4">
+                    <span class="cyber-badge-green">
+                        <i class="fas fa-circle-check text-[10px]"></i> ACTIVE DEFENSE PERIMETER
+                    </span>
+                    <span class="cyber-badge-cyan">
+                        <i class="fas fa-graduation-cap text-xs"></i> MCA SCHOLAR
+                    </span>
+                </div>
+
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold font-cyber tracking-tight leading-tight">
+                    Hi, I'm <br class="hidden sm:inline">
+                    <span class="gradient-text glitch-hover">
+                        Shubham Dhage
+                    </span>
+                </h1>
+
+                <!-- Dynamic Typing Subtitle -->
+                <div class="mt-4 text-xl sm:text-2xl font-code text-gray-300 flex items-center justify-center lg:justify-start gap-2 min-h-[48px]">
+                    <span class="text-purple-400 font-bold">&gt;</span>
+                    <span id="typing" class="text-cyan-400 font-semibold"></span>
+                    <span class="animate-pulse text-purple-400 font-bold">|</span>
+                </div>
+
+                <p class="mt-5 text-gray-400 text-base md:text-lg leading-relaxed max-w-2xl">
+                    Master of Computer Applications (MCA) scholar at <span class="text-white font-medium">IIMS Pune (SPPU)</span> and proactive Cybersecurity Practitioner. Specializing in Ethical Hacking, Network Security, Vulnerability Reconnaissance, and Autonomous Self-Defending architectures.
+                </p>
+
+                <!-- Hero Action Buttons -->
+                <div class="flex flex-wrap gap-4 mt-8 justify-center lg:justify-start">
+
+                    <a href="#projects" class="primary-btn">
+                        <i class="fas fa-shield-virus"></i> View Cyber Projects
+                    </a>
+
+                    <a href="#terminal" class="secondary-btn">
+                        <i class="fas fa-terminal"></i> Security Terminal
+                    </a>
+
+                    <a href="assets/Resume/ShubhamDhage_C.pdf" download class="secondary-btn">
+                        <i class="fas fa-file-pdf"></i> Download CV
+                    </a>
+
+                    <a href="https://github.com/ShubhamDhage874" target="_blank" rel="noopener noreferrer" class="secondary-btn" title="View GitHub Repositories">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+
+                </div>
+
+                <!-- Quick Tech Badges -->
+                <div class="mt-10 flex flex-wrap items-center justify-center lg:justify-start gap-2 text-xs font-code text-gray-400">
+                    <span class="text-gray-500 font-semibold uppercase tracking-wider text-[11px] mr-2">Core Stack:</span>
+                    <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-purple-300">Kali Linux</span>
+                    <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-cyan-300">Nmap</span>
+                    <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-emerald-300">Python Scapy</span>
+                    <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-yellow-300">Bash</span>
+                    <span class="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-blue-300">TCP/IP</span>
+                </div>
+
+            </div>
+
+            <!-- Hero Right: 3D Holographic Cyber Ring & Profile Picture -->
+            <div class="lg:w-5/12 flex justify-center items-center" data-aos="zoom-in">
+                <div class="profile-wrapper">
+                    <div class="profile-ring"></div>
+                    <div class="profile-ring-outer"></div>
+                    <div class="profile-container">
+                        <img src="assets/images/image.jpeg" alt="Shubham Dhage - Cyber Security Analyst" class="profile-image">
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Interactive Cyber Defense Terminal Section -->
+        <section id="terminal" class="section-padding" data-aos="fade-up">
+
+            <div class="text-center mb-8">
+                <span class="cyber-badge font-code mb-2">
+                    <i class="fas fa-terminal"></i> LIVE SIMULATOR
                 </span>
-            </h1>
-
-            <p class="mt-6 text-xl text-gray-300">
-                <span id="typing"></span>
-            </p>
-
-            <div class="flex flex-wrap gap-4 mt-8 justify-center md:justify-start">
-
-                <a href="#projects" class="primary-btn">
-                    View Projects
-                </a>
-
-                <a href="#contact" class="secondary-btn">
-                    Contact Me
-                </a>
-
-                <a href="assets/Resume/ShubhamDhage_C.pdf" download class="secondary-btn">
-                    Download Resume
-                </a>
-
-            </div>
-        </div>
-
-        <div class="md:w-1/2 flex justify-center" data-aos="zoom-in">
-
-            <div class="profile-container">
-                <img src="assets/images/image.jpeg" alt="Shubham Dhage" class="profile-image">
-            </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section-padding" data-aos="fade-up">
-
-        <h2 class="section-title">About Me</h2>
-
-        <p class="section-text">
-            I am a BCA Student passionate about Cyber Security, Networking, Linux,
-            Ethical Hacking and Security Analysis.
-
-            I enjoy understanding how systems work, identifying vulnerabilities,
-            improving security posture and continuously learning modern security
-            practices.
-
-            My goal is to become a professional Cyber Security Analyst and contribute
-            to securing digital environments.
-        </p>
-
-        <!-- Skills -->
-
-        <h3 class="text-2xl font-semibold text-center mt-16 mb-8">
-            Technical Skills
-        </h3>
-
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-
-            <div class="skill-card">Cyber Security Fundamentals</div>
-            <div class="skill-card">Networking (TCP/IP)</div>
-            <div class="skill-card">Kali Linux</div>
-            <div class="skill-card">Nmap</div>
-            <div class="skill-card">Python</div>
-            <div class="skill-card">SQL</div>
-            <div class="skill-card">Linux</div>
-            <div class="skill-card">Bash Scripting</div>
-            <div class="skill-card">Firewall Basics</div>
-            <div class="skill-card">System Troubleshooting</div>
-            <div class="skill-card">Ethical Hacking Basics</div>
-            <div class="skill-card">Problem Solving</div>
-
-        </div>
-
-    </section>
-
-    <!-- Projects -->
-
-    <section id="projects" class="section-padding" data-aos="fade-up">
-
-        <h2 class="section-title">
-            Projects
-        </h2>
-
-        <div class="grid md:grid-cols-2 gap-8">
-
-            <div class="project-card">
-
-                <h3 class="text-2xl font-semibold">
-                    ChatNova AI Chatbot
-                </h3>
-
-                <p class="text-gray-400 mt-3">
-                    AI-powered inquiry chatbot built using HTML, CSS and JavaScript.
+                <h2 class="section-title">Security Command Terminal</h2>
+                <p class="section-subtitle">
+                    Interact directly with my self-defense node. Execute live commands to audit security posture, inspect my MCA & cybersecurity credentials, or run simulated network scans.
                 </p>
-
-                <a href="https://peppy-khapse-60d4b1.netlify.app/" target="_blank"
-                    class="primary-btn mt-5 inline-block">
-                    Live Demo
-                </a>
-
             </div>
 
-            <div class="project-card">
+            <div class="terminal-window max-w-4xl mx-auto">
+                <div class="terminal-header">
+                    <div class="terminal-controls">
+                        <span class="terminal-dot dot-red"></span>
+                        <span class="terminal-dot dot-yellow"></span>
+                        <span class="terminal-dot dot-green"></span>
+                    </div>
+                    <div class="text-xs font-code text-gray-400 flex items-center gap-2">
+                        <i class="fas fa-lock text-cyan-400 text-[10px]"></i>
+                        <span>shubham@cyber-soc: ~/defense-node</span>
+                    </div>
+                    <div class="text-xs font-code text-purple-400 hidden sm:block">
+                        BASH 5.2.15
+                    </div>
+                </div>
 
-                <h3 class="text-2xl font-semibold">
-                    Weather Project
-                </h3>
+                <div id="terminal-body" class="terminal-body">
+                    <div class="text-gray-400">
+                        [+] System initialized: <span class="text-cyan-400">Shubham Dhage Cyber Security Console v2.4</span>
+                    </div>
+                    <div class="text-gray-400">
+                        [+] Status: <span class="text-emerald-400 font-semibold">ALL FIREWALL POLICIES ONLINE</span>
+                    </div>
+                    <div class="mt-2 text-gray-300">
+                        Type <span class="text-cyan-400 font-bold">'help'</span> to view available security commands, or try <span class="text-purple-400 font-bold">'scan'</span> / <span class="text-purple-400 font-bold">'whoami'</span>.
+                    </div>
+                </div>
 
-                <p class="text-gray-400 mt-3">
-                    Weather application created during a hackathon using weather data
-                    concepts and responsive UI.
+                <div class="p-3 bg-black/80 border-t border-purple-900/30 flex items-center gap-2">
+                    <span class="text-cyan-400 font-code font-bold text-sm">shubham@cyber-soc:~$</span>
+                    <input id="terminal-input" type="text" autocomplete="off" spellcheck="false" placeholder="type 'help' or 'scan'..." class="terminal-input">
+                </div>
+            </div>
+
+            <!-- Quick Terminal Command Pills -->
+            <div class="flex flex-wrap justify-center gap-2 mt-4 text-xs font-code">
+                <span class="text-gray-500 py-1">Quick Run:</span>
+                <button onclick="document.getElementById('terminal-input').value='whoami'; document.getElementById('terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));" class="px-2.5 py-1 rounded bg-slate-900 border border-purple-500/30 text-purple-300 hover:border-purple-400 transition-colors">whoami</button>
+                <button onclick="document.getElementById('terminal-input').value='education'; document.getElementById('terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));" class="px-2.5 py-1 rounded bg-slate-900 border border-cyan-500/30 text-cyan-300 hover:border-cyan-400 transition-colors">education</button>
+                <button onclick="document.getElementById('terminal-input').value='scan'; document.getElementById('terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));" class="px-2.5 py-1 rounded bg-slate-900 border border-emerald-500/30 text-emerald-300 hover:border-emerald-400 transition-colors">scan</button>
+                <button onclick="document.getElementById('terminal-input').value='firewall'; document.getElementById('terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));" class="px-2.5 py-1 rounded bg-slate-900 border border-yellow-500/30 text-yellow-300 hover:border-yellow-400 transition-colors">firewall</button>
+                <button onclick="document.getElementById('terminal-input').value='decrypt'; document.getElementById('terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));" class="px-2.5 py-1 rounded bg-slate-900 border border-pink-500/30 text-pink-300 hover:border-pink-400 transition-colors">decrypt</button>
+            </div>
+
+        </section>
+
+        <!-- About & Academic Journey Section -->
+        <section id="about" class="section-padding" data-aos="fade-up">
+
+            <div class="text-center mb-12">
+                <span class="cyber-badge font-code mb-2">
+                    <i class="fas fa-user-shield"></i> IDENTITY & ACADEMICS
+                </span>
+                <h2 class="section-title">About & Academic Journey</h2>
+                <p class="section-subtitle">
+                    Bridging foundational computer science theory with proactive cybersecurity defense, network analysis, and vulnerability assessment.
                 </p>
+            </div>
+
+            <!-- Bio Card -->
+            <div class="cyber-card mb-12">
+                <div class="flex items-start gap-4">
+                    <div class="w-12 h-12 rounded-xl bg-purple-900/40 border border-purple-500/40 flex-shrink-0 flex items-center justify-center text-purple-400 text-xl">
+                        <i class="fas fa-fingerprint"></i>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold font-cyber text-white">Security Mindset & Mission</h3>
+                        <p class="text-gray-300 mt-2 leading-relaxed">
+                            I am a Master of Computer Applications (MCA) scholar with an intense fascination for Cyber Security, Offensive Reconnaissance, and SOC Defensive Engineering. I focus on understanding system internals, diagnosing protocol-level vulnerabilities, hardening Linux/Windows server environments, and automating threat scans with Python and Bash.
+                        </p>
+                        <p class="text-gray-400 mt-2 text-sm leading-relaxed">
+                            My aspiration is to operate as a high-impact Cyber Security Analyst & SOC Engineer, securing critical digital perimeters against evolving cyber threats, ransomware, and unauthorized intrusions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic Timeline Cards (Highlighting MCA @ IIMS Pune & BCA) -->
+            <div class="grid md:grid-cols-2 gap-8">
+
+                <!-- MCA Card -->
+                <div class="edu-card" data-aos="fade-right">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="cyber-badge-cyan">
+                            <i class="fas fa-clock"></i> 2024 - 2026 (PURSUING)
+                        </span>
+                        <span class="text-xs font-code text-emerald-400 bg-emerald-950/60 px-2 py-0.5 rounded border border-emerald-500/40">
+                            Current Degree
+                        </span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white font-cyber">
+                        Master of Computer Applications (MCA)
+                    </h3>
+
+                    <h4 class="text-lg font-semibold text-purple-400 mt-1">
+                        Yashaswi Education Society's <br>
+                        International Institute of Management Science (IIMS), Pune
+                    </h4>
+
+                    <div class="mt-4 space-y-2 text-sm text-gray-300">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-university text-cyan-400 text-xs"></i>
+                            <span>Permanently Affiliated to <strong>Savitribai Phule Pune University (SPPU)</strong></span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-award text-yellow-400 text-xs"></i>
+                            <span>AICTE Approved | NAAC Re-Accredited | Recognized by DTE</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-certificate text-purple-400 text-xs"></i>
+                            <span>ISO 21001:2018 Certified | UGC Recognized under Section 2(f)</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between">
+                        <span class="text-xs font-code text-gray-400">Campus: Chinchwad, Pune</span>
+                        <a href="https://iims.ac.in/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 text-xs font-code hover:underline flex items-center gap-1">
+                            Visit IIMS Portal <i class="fas fa-arrow-up-right-from-square text-[10px]"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- BCA Card -->
+                <div class="edu-card" data-aos="fade-left">
+                    <div class="flex justify-between items-start mb-4">
+                        <span class="cyber-badge">
+                            <i class="fas fa-check-circle"></i> COMPLETED FOUNDATION
+                        </span>
+                        <span class="text-xs font-code text-purple-300 bg-purple-950/60 px-2 py-0.5 rounded border border-purple-500/40">
+                            Undergraduate
+                        </span>
+                    </div>
+
+                    <h3 class="text-2xl font-bold text-white font-cyber">
+                        Bachelor of Computer Applications (BCA)
+                    </h3>
+
+                    <h4 class="text-lg font-semibold text-purple-400 mt-1">
+                        Computer Science & Applications
+                    </h4>
+
+                    <div class="mt-4 space-y-2 text-sm text-gray-300">
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-network-wired text-cyan-400 text-xs"></i>
+                            <span>Comprehensive study of Computer Networking (TCP/IP model)</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-code text-cyan-400 text-xs"></i>
+                            <span>Object-Oriented Programming, Data Structures & Algorithms</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fas fa-database text-cyan-400 text-xs"></i>
+                            <span>Relational Database Management Systems (RDBMS) & SQL Architecture</span>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-gray-800 flex items-center justify-between">
+                        <span class="text-xs font-code text-gray-400">Foundation in Software & Linux</span>
+                        <span class="text-xs font-code text-purple-400">BCA Graduate</span>
+                    </div>
+                </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+        <!-- Technical & Cyber Arsenal Section -->
+        <section id="skills" class="section-padding" data-aos="fade-up">
 
-    <!-- Contact -->
+            <div class="text-center mb-12">
+                <span class="cyber-badge font-code mb-2">
+                    <i class="fas fa-microchip"></i> CAPABILITIES
+                </span>
+                <h2 class="section-title">Cyber Security Arsenal</h2>
+                <p class="section-subtitle">
+                    A multi-layered technical toolkit spanning offensive penetration testing methodologies, defensive SOC fundamentals, protocol analysis, and security scripting.
+                </p>
+            </div>
 
-    <section id="contact" class="section-padding" data-aos="fade-up">
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <h2 class="section-title">
-            Contact
-        </h2>
+                <!-- 1. Offensive & Recon -->
+                <div class="cyber-card">
+                    <div class="text-purple-400 text-2xl mb-4">
+                        <i class="fas fa-skull-crossbones"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-cyber text-white mb-3">Offensive & Recon</h3>
+                    <ul class="space-y-2 text-sm text-gray-300 font-code">
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-purple-400 text-xs"></i> Kali Linux</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-purple-400 text-xs"></i> Nmap Port Scanning</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-purple-400 text-xs"></i> Vulnerability Discovery</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-purple-400 text-xs"></i> Metasploit Basics</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-purple-400 text-xs"></i> Burp Suite Basics</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-purple-400 text-xs"></i> Wireshark Traffic Triage</li>
+                    </ul>
+                </div>
 
-        <div class="max-w-xl mx-auto text-center space-y-4">
+                <!-- 2. Defensive & SOC -->
+                <div class="cyber-card">
+                    <div class="text-cyan-400 text-2xl mb-4">
+                        <i class="fas fa-shield-cat"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-cyber text-white mb-3">Defensive & SOC</h3>
+                    <ul class="space-y-2 text-sm text-gray-300 font-code">
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-cyan-400 text-xs"></i> TCP/IP Protocol Analysis</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-cyan-400 text-xs"></i> Firewall & NAT Rules</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-cyan-400 text-xs"></i> Linux Hardening</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-cyan-400 text-xs"></i> Network Log Auditing</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-cyan-400 text-xs"></i> Honeypot Configuration</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-cyan-400 text-xs"></i> Incident Response Core</li>
+                    </ul>
+                </div>
 
-            <p>📧 shubhamdhage872004@gmail.com</p>
+                <!-- 3. Scripting & Automation -->
+                <div class="cyber-card">
+                    <div class="text-emerald-400 text-2xl mb-4">
+                        <i class="fas fa-terminal"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-cyber text-white mb-3">Scripting & Code</h3>
+                    <ul class="space-y-2 text-sm text-gray-300 font-code">
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-400 text-xs"></i> Python (Scapy & Sockets)</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-400 text-xs"></i> Bash Shell Scripting</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-400 text-xs"></i> SQL (Security & Queries)</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-400 text-xs"></i> JavaScript (DOM Defense)</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-400 text-xs"></i> HTML5 & Tailwind CSS</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-emerald-400 text-xs"></i> Automation Workflows</li>
+                    </ul>
+                </div>
 
-            <p>📞 8237963146</p>
-
-            <p>📍 Sambhaji Nagar, Maharashtra</p>
-
-            <div class="flex justify-center gap-4 flex-wrap">
-
-                <a href="mailto:shubhamdhage872004@gmail.com" class="primary-btn">
-                    Send Email
-                </a>
-
-                <a href="https://www.linkedin.com/in/shubham-dhage-28a26429a" target="_blank" class="secondary-btn">
-                    LinkedIn
-                </a>
+                <!-- 4. Systems & Platforms -->
+                <div class="cyber-card">
+                    <div class="text-yellow-400 text-2xl mb-4">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3 class="text-lg font-bold font-cyber text-white mb-3">Systems & Ops</h3>
+                    <ul class="space-y-2 text-sm text-gray-300 font-code">
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-yellow-400 text-xs"></i> Debian / Ubuntu / Kali</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-yellow-400 text-xs"></i> Windows Server Basics</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-yellow-400 text-xs"></i> Git & GitHub Versioning</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-yellow-400 text-xs"></i> VirtualBox & VMware Labs</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-yellow-400 text-xs"></i> Router & Switch Config</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-chevron-right text-yellow-400 text-xs"></i> Troubleshooting & Triage</li>
+                    </ul>
+                </div>
 
             </div>
 
-        </div>
+        </section>
 
-    </section>
+        <!-- Projects & Cyber Tools Showcase Section -->
+        <section id="projects" class="section-padding" data-aos="fade-up">
 
-    <footer class="text-center py-8 text-gray-500 border-t border-gray-800">
-        © 2026 Shubham Dhage | Cyber Security Portfolio
-    </footer>
+            <div class="text-center mb-12">
+                <span class="cyber-badge font-code mb-2">
+                    <i class="fas fa-diagram-project"></i> ACTIVE DEPLOYMENTS
+                </span>
+                <h2 class="section-title">Projects & Security Tools</h2>
+                <p class="section-subtitle">
+                    Hands-on software architectures, cybersecurity reconnaissance scripts, AI systems, and interactive applications.
+                </p>
+            </div>
 
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- 1. ChatNova AI Chatbot -->
+                <div class="cyber-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="cyber-badge-cyan text-xs">AI & FULL STACK</span>
+                            <span class="text-xs font-code text-gray-400">Rasa + React + PG</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-cyber text-white">ChatNova AI Chatbot</h3>
+                        <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                            Intelligent enterprise inquiry chatbot utilizing Rasa framework for NLP, React + Tailwind CSS for user experience, and PostgreSQL for secure storage. Includes an administrative control center for dataset uploads and model re-training.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mt-4">
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-cyan-400 border border-cyan-800">NLP</span>
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-purple-400 border border-purple-800">React</span>
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-gray-300 border border-gray-800">PostgreSQL</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-800">
+                        <a href="https://peppy-khapse-60d4b1.netlify.app/" target="_blank" rel="noopener noreferrer" class="primary-btn text-xs !py-1.5 flex-1 justify-center">
+                            <i class="fas fa-up-right-from-square"></i> Live Demo
+                        </a>
+                        <a href="https://github.com/ShubhamDhage874/ChatNovaBot" target="_blank" rel="noopener noreferrer" class="secondary-btn text-xs !py-1.5 flex-1 justify-center">
+                            <i class="fab fa-github"></i> Source
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 2. PyScan-Recon (Cyber Tool) -->
+                <div class="cyber-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="cyber-badge-green text-xs">CYBER DEFENSE TOOL</span>
+                            <span class="text-xs font-code text-gray-400">Python 3 + Sockets</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-cyber text-white">PyScan-Recon Scanner</h3>
+                        <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                            Multi-threaded network reconnaissance tool designed in Python. Performs rapid TCP connect port audits, service banner identification, and flags exposed critical interfaces (SSH, FTP, Telnet, HTTP) across target subnets.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mt-4">
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-emerald-400 border border-emerald-800">Port Recon</span>
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-cyan-400 border border-cyan-800">Multi-Threading</span>
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-purple-400 border border-purple-800">Socket API</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-800">
+                        <a href="#terminal" onclick="document.getElementById('terminal-input').value='scan'; document.getElementById('terminal-input').dispatchEvent(new KeyboardEvent('keydown', {'key':'Enter'}));" class="primary-btn text-xs !py-1.5 flex-1 justify-center">
+                            <i class="fas fa-play"></i> Run In Terminal
+                        </a>
+                        <a href="https://github.com/ShubhamDhage874" target="_blank" rel="noopener noreferrer" class="secondary-btn text-xs !py-1.5 flex-1 justify-center">
+                            <i class="fab fa-github"></i> Repository
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3. NetSentry Packet Sniffer (Cyber Tool) -->
+                <div class="cyber-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="cyber-badge text-xs">SOC ANALYSIS</span>
+                            <span class="text-xs font-code text-gray-400">Python + Scapy</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-cyber text-white">NetSentry Packet Analyzer</h3>
+                        <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                            Raw socket protocol packet sniffer engineered to capture Ethernet and IP frames in real-time. Analyzes TCP flags, detects unencrypted traffic anomalies, and warns operators of potential ARP spoofing or port flooding.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mt-4">
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-purple-400 border border-purple-800">Scapy</span>
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-cyan-400 border border-cyan-800">Packet Triage</span>
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-emerald-400 border border-emerald-800">Network Sec</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-800">
+                        <a href="https://github.com/ShubhamDhage874" target="_blank" rel="noopener noreferrer" class="primary-btn text-xs !py-1.5 flex-1 justify-center">
+                            <i class="fab fa-github"></i> Tool Code
+                        </a>
+                        <a href="#terminal" class="secondary-btn text-xs !py-1.5 flex-1 justify-center">
+                            <i class="fas fa-info-circle"></i> View Specs
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 4. Vision-X Project -->
+                <div class="cyber-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="cyber-badge-cyan text-xs">WEB ARCHITECTURE</span>
+                            <span class="text-xs font-code text-gray-400">HTML5 + Modern JS</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-cyber text-white">Vision-X Interface</h3>
+                        <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                            Modern web architecture project focused on sleek responsive interactive elements, fluid animations, and robust client-side routing. Showcased on personal repository.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mt-4">
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-cyan-400 border border-cyan-800">Interactive UI</span>
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-gray-300 border border-gray-800">Clean Code</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-800">
+                        <a href="https://github.com/ShubhamDhage874/Vision-X" target="_blank" rel="noopener noreferrer" class="secondary-btn text-xs !py-1.5 w-full justify-center">
+                            <i class="fab fa-github"></i> Inspect Vision-X Repo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. Autonomous Portfolio Honeypot & Self-Defense -->
+                <div class="cyber-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="cyber-badge-green text-xs">ACTIVE HARDENING</span>
+                            <span class="text-xs font-code text-emerald-400">Defense Posture</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-cyber text-white">Portfolio Self-Defense System</h3>
+                        <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                            The very website you are browsing features built-in self-defenses: Anti-DevTools Honeypot console logging, real-time client-side XSS injection quarantine, anti-clickjacking frame busting, and bot scraping obfuscation.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mt-4">
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-emerald-400 border border-emerald-800">Anti-XSS</span>
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-purple-400 border border-purple-800">Honeypot</span>
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-cyan-400 border border-cyan-800">Rate Limiter</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-800">
+                        <a href="#contact" class="secondary-btn text-xs !py-1.5 w-full justify-center">
+                            <i class="fas fa-shield-halved"></i> Test Attack Defenses
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. Hackathon Weather Monitor -->
+                <div class="cyber-card flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="cyber-badge text-xs">API INTEGRATION</span>
+                            <span class="text-xs font-code text-gray-400">Hackathon Build</span>
+                        </div>
+                        <h3 class="text-xl font-bold font-cyber text-white">Atmospheric Weather App</h3>
+                        <p class="text-gray-300 text-sm mt-3 leading-relaxed">
+                            Rapid hackathon project implementing external RESTful weather telemetry APIs, input validation, and clean mobile-optimized weather metrics visualization.
+                        </p>
+                        <div class="flex flex-wrap gap-1.5 mt-4">
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-yellow-400 border border-yellow-800">REST API</span>
+                            <span class="px-2 py-0.5 rounded bg-black/60 text-[11px] font-code text-purple-400 border border-purple-800">Responsive</span>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-3 mt-6 pt-4 border-t border-gray-800">
+                        <a href="https://github.com/ShubhamDhage874" target="_blank" rel="noopener noreferrer" class="secondary-btn text-xs !py-1.5 w-full justify-center">
+                            <i class="fab fa-github"></i> GitHub Code
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Security Labs & Continuous Learning Roadmap Section -->
+        <section id="security-labs" class="section-padding" data-aos="fade-up">
+
+            <div class="text-center mb-12">
+                <span class="cyber-badge font-code mb-2">
+                    <i class="fas fa-road"></i> CONTINUOUS EVOLUTION
+                </span>
+                <h2 class="section-title">Cyber Labs & Target Roadmap</h2>
+                <p class="section-subtitle">
+                    Active practical training regimes, hands-on CTF platforms, and targeted international security certifications in progress.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Target 1: CompTIA Security+ -->
+                <div class="cyber-card border-t-2 border-t-cyan-500">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs font-code text-cyan-400">ACTIVE STUDY PATH</span>
+                        <i class="fas fa-shield-virus text-cyan-400 text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-cyber text-white">CompTIA Security+ (SY0-701)</h3>
+                    <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                        Mastering foundational cybersecurity principles: Threat analysis, Cryptographic standards, Identity and Access Management (IAM), Security operations, and Enterprise governance.
+                    </p>
+                    <div class="mt-4 pt-3 border-t border-gray-800 flex items-center justify-between text-xs font-code text-gray-400">
+                        <span>Milestone: 2026 Target</span>
+                        <span class="text-cyan-400 font-semibold">In Progress</span>
+                    </div>
+                </div>
+
+                <!-- Target 2: CEH -->
+                <div class="cyber-card border-t-2 border-t-purple-500">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs font-code text-purple-400">OFFENSIVE ROADMAP</span>
+                        <i class="fas fa-user-secret text-purple-400 text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-cyber text-white">Certified Ethical Hacker (CEH)</h3>
+                    <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                        Deepening offensive security vectors: Footprinting, Network sniffing, Social engineering defense, Web application vulnerability testing, and Malware detection strategies.
+                    </p>
+                    <div class="mt-4 pt-3 border-t border-gray-800 flex items-center justify-between text-xs font-code text-gray-400">
+                        <span>Milestone: MCA Horizon</span>
+                        <span class="text-purple-400 font-semibold">Planned Path</span>
+                    </div>
+                </div>
+
+                <!-- Target 3: Hands-on Cyber Labs -->
+                <div class="cyber-card border-t-2 border-t-emerald-500">
+                    <div class="flex justify-between items-center mb-3">
+                        <span class="text-xs font-code text-emerald-400">PRACTICAL LABS</span>
+                        <i class="fas fa-cube text-emerald-400 text-lg"></i>
+                    </div>
+                    <h3 class="text-xl font-bold font-cyber text-white">TryHackMe & HTB Labs</h3>
+                    <p class="text-gray-300 text-sm mt-2 leading-relaxed">
+                        Solving hands-on Capture The Flag (CTF) challenges, attacking vulnerable target machines in virtual sandbox environments, privilege escalation in Linux, and network pivoting.
+                    </p>
+                    <div class="mt-4 pt-3 border-t border-gray-800 flex items-center justify-between text-xs font-code text-gray-400">
+                        <span>Mode: Daily Hands-on</span>
+                        <span class="text-emerald-400 font-semibold">Active Labber</span>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Secure Contact & Attack-Tested Transmission Section -->
+        <section id="contact" class="section-padding" data-aos="fade-up">
+
+            <div class="text-center mb-10">
+                <span class="cyber-badge font-code mb-2">
+                    <i class="fas fa-lock"></i> ENCRYPTED CHANNEL
+                </span>
+                <h2 class="section-title">Initiate Contact</h2>
+                <p class="section-subtitle">
+                    Have an inquiry, internship opportunity, or cyber security collaboration? Send a message through this attack-proof portal.
+                </p>
+            </div>
+
+            <!-- Cyber Attack Alert Banner (Flashes if XSS / injection is detected) -->
+            <div id="cyber-alert-banner" class="cyber-alert">
+                <i class="fas fa-triangle-exclamation text-xl"></i>
+                <div id="cyber-alert-text" class="text-sm font-code"></div>
+            </div>
+
+            <div class="grid lg:grid-cols-12 gap-8 max-w-5xl mx-auto">
+
+                <!-- Left: Protected Contact Details & Anti-Scraping -->
+                <div class="lg:col-span-5 cyber-card flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-bold font-cyber text-white mb-4">
+                            Direct Comms
+                        </h3>
+                        <p class="text-gray-300 text-sm leading-relaxed mb-6">
+                            Contact information is safeguarded against automated crawlers and email scrapers with dynamic client-side decryption.
+                        </p>
+
+                        <div class="space-y-4 text-sm font-code">
+                            <div class="flex items-center gap-3 p-3 rounded-lg bg-black/50 border border-slate-800">
+                                <div class="w-8 h-8 rounded bg-purple-900/40 text-purple-400 flex items-center justify-center">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="text-gray-400 block text-xs">Official Email</span>
+                                    <!-- Base64 obfuscated to prevent bot harvesting -->
+                                    <a href="#" data-obf-email="c2h1YmhhbWRoYWdlODcyMDA0QGdtYWlsLmNvbQ==" class="text-cyan-400 hover:underline">
+                                        shubhamdhage872004@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 p-3 rounded-lg bg-black/50 border border-slate-800">
+                                <div class="w-8 h-8 rounded bg-cyan-900/40 text-cyan-400 flex items-center justify-center">
+                                    <i class="fas fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="text-gray-400 block text-xs">Direct Phone</span>
+                                    <a href="#" data-obf-phone="KzkxODIzNzk2MzE0Ng==" class="text-gray-200 hover:text-white">
+                                        +91 8237963146
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-3 p-3 rounded-lg bg-black/50 border border-slate-800">
+                                <div class="w-8 h-8 rounded bg-emerald-900/40 text-emerald-400 flex items-center justify-center">
+                                    <i class="fas fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="text-gray-400 block text-xs">Primary Location</span>
+                                    <span class="text-gray-200">Pune / Sambhaji Nagar, Maharashtra</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Social Presence -->
+                    <div class="mt-8 pt-4 border-t border-gray-800">
+                        <span class="text-xs font-code text-gray-400 block mb-3">VERIFIED HANDLES:</span>
+                        <div class="flex gap-3">
+                            <a href="https://github.com/ShubhamDhage874" target="_blank" rel="noopener noreferrer" class="secondary-btn text-xs !py-2 !px-3">
+                                <i class="fab fa-github"></i> GitHub
+                            </a>
+                            <a href="https://www.linkedin.com/in/shubham-dhage-28a26429a" target="_blank" rel="noopener noreferrer" class="primary-btn text-xs !py-2 !px-3">
+                                <i class="fab fa-linkedin"></i> LinkedIn
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Self-Defending Secure Contact Form -->
+                <div class="lg:col-span-7 cyber-card">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="text-xl font-bold font-cyber text-white">
+                            Secure Dispatch Terminal
+                        </h3>
+                        <span class="text-[11px] font-code text-emerald-400 bg-emerald-950/70 border border-emerald-500/30 px-2 py-0.5 rounded">
+                            <i class="fas fa-shield"></i> XSS Guard Active
+                        </span>
+                    </div>
+
+                    <form id="secure-contact-form" class="space-y-4">
+                        <div>
+                            <label for="form-name" class="block text-xs font-code text-gray-300 mb-1">
+                                Sender Name / Organization:
+                            </label>
+                            <input type="text" id="form-name" required placeholder="e.g. Recruiters / Security Lead"
+                                class="w-full bg-black/60 border border-slate-700 focus:border-purple-500 rounded-lg px-3.5 py-2.5 text-sm text-gray-200 focus:outline-none font-code">
+                        </div>
+
+                        <div>
+                            <label for="form-email" class="block text-xs font-code text-gray-300 mb-1">
+                                Return Email Address:
+                            </label>
+                            <input type="email" id="form-email" required placeholder="name@company.com"
+                                class="w-full bg-black/60 border border-slate-700 focus:border-purple-500 rounded-lg px-3.5 py-2.5 text-sm text-gray-200 focus:outline-none font-code">
+                        </div>
+
+                        <div>
+                            <label for="form-message" class="block text-xs font-code text-gray-300 mb-1">
+                                Encrypted Message / Inquiry:
+                            </label>
+                            <textarea id="form-message" rows="4" required placeholder="Type your message here... (Payloads tested against sanitizers)"
+                                class="w-full bg-black/60 border border-slate-700 focus:border-purple-500 rounded-lg px-3.5 py-2.5 text-sm text-gray-200 focus:outline-none font-code"></textarea>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+                            <span class="text-xs font-code text-gray-500">
+                                Protected by client rate-limiter & honeypot.
+                            </span>
+                            <button type="submit" class="primary-btn w-full sm:w-auto font-code text-sm">
+                                <i class="fas fa-paper-plane"></i> Transmit Packet
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="border-t border-purple-900/40 bg-black/90 py-8 px-6 text-center text-xs font-code text-gray-400">
+            <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="flex items-center gap-2">
+                    <i class="fas fa-shield-halved text-cyan-400"></i>
+                    <span>&copy; 2026 <strong>Shubham Dhage</strong> | Cyber Security & MCA Portfolio</span>
+                </div>
+                <div class="text-gray-400">
+                    MCA Scholar @ <a href="https://iims.ac.in/" target="_blank" class="text-purple-400 hover:underline">IIMS Pune</a> | Savitribai Phule Pune University (SPPU)
+                </div>
+                <div class="flex items-center gap-3">
+                    <span class="text-emerald-400 font-semibold">[ALL SYSTEMS OPERATIONAL]</span>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
     <script>
         AOS.init({
             once: true,
-            duration: 1000
+            duration: 800,
+            easing: 'ease-out-cubic'
         });
     </script>
 
