@@ -311,6 +311,13 @@ function initThreeJsBackground() {
     mouseY = (e.clientY - window.innerHeight / 2) * 0.001;
   });
 
+  window.addEventListener("touchmove", (e) => {
+    if (e.touches && e.touches[0]) {
+      mouseX = (e.touches[0].clientX - window.innerWidth / 2) * 0.001;
+      mouseY = (e.touches[0].clientY - window.innerHeight / 2) * 0.001;
+    }
+  }, { passive: true });
+
   // Animation loop
   function animate() {
     requestAnimationFrame(animate);
